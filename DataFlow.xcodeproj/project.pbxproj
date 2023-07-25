@@ -17,7 +17,6 @@
 		0768628A2A6F5A9C00041D6B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862892A6F5A9C00041D6B /* RootView.swift */; };
 		0768628C2A6F650700041D6B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768628B2A6F650700041D6B /* ButtonView.swift */; };
 		076862962A701EC600041D6B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862952A701EC600041D6B /* StorageManager.swift */; };
-		076862982A701F3B00041D6B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862972A701F3B00041D6B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		076862892A6F5A9C00041D6B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0768628B2A6F650700041D6B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		076862952A701EC600041D6B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		076862972A701F3B00041D6B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 			children = (
 				0768629B2A7029C400041D6B /* App */,
 				0768629D2A7029D600041D6B /* Services */,
-				0768629A2A7029AB00041D6B /* Models */,
 				076862872A6F5A2300041D6B /* UserSettings.swift */,
 				076862812A6F508000041D6B /* TimeCounter.swift */,
 				076862992A7029A000041D6B /* Views */,
@@ -94,14 +91,6 @@
 				0768628B2A6F650700041D6B /* ButtonView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0768629A2A7029AB00041D6B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				076862972A701F3B00041D6B /* User.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		0768629B2A7029C400041D6B /* App */ = {
@@ -203,7 +192,6 @@
 				076862762A6F4B0B00041D6B /* ContentView.swift in Sources */,
 				0768628A2A6F5A9C00041D6B /* RootView.swift in Sources */,
 				076862862A6F597700041D6B /* LoginView.swift in Sources */,
-				076862982A701F3B00041D6B /* User.swift in Sources */,
 				076862742A6F4B0B00041D6B /* DataFlowApp.swift in Sources */,
 				0768628C2A6F650700041D6B /* ButtonView.swift in Sources */,
 				076862962A701EC600041D6B /* StorageManager.swift in Sources */,

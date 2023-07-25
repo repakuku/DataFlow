@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var userSettings: UserSettings
-    @AppStorage("user") var userStorage = Data()
     
     private let storageManager = StorageManager.shared
     
@@ -32,13 +31,7 @@ struct ContentView: View {
     
     private func logout() {
         userSettings.isRegistered.toggle()
-        deleteUser()
-    }
-    
-    private func deleteUser() {
-        storageManager.save(User()) { userData in
-            userStorage = userData
-        }
+        storageManager.clear(userSettings)
     }
 }
 

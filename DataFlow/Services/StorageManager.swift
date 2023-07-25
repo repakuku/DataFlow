@@ -7,26 +7,28 @@
 
 import Foundation
 import SwiftUI
-import Combine
 
 final class StorageManager {
-    static let shared = StorageManager()
+    @AppStorage("userName") var userName = ""
+    @AppStorage("userIsRegistered") var userIsRegistered = false
     
-    @AppStorage("user") var userStorage = Data()
+    static let shared = StorageManager()
     
     private init() {}
     
-    func save(_ user: User, completion: (Data) -> Void) {
-        let encoder = JSONEncoder()
-        if let data = try? encoder.encode(user) {
-            completion(data)
-        }
+    func save(_ user: UserSettings) {
+        userName = user.name
+        userIsRegistered = user.isRegistered
     }
     
-    func loadUser(from data: Data, completion: (User) -> Void) {
-        let decoder = JSONDecoder()
-        if let user = try? decoder.decode(User.self, from: data) {
-            completion(user)
-        }
+    func load(_ user: UserSettings) {
+        user.name = userName
+        user.isRegistered = userIsRegistered
+    }
+    
+    func clear(_ user: UserSettings) {
+        user.name = ""
+        user.isRegistered = false
+        save(user)
     }
 }

@@ -12,7 +12,6 @@ struct LoginView: View {
     @State private var buttonDisabled = true
     @State private var color = Color.red
     @EnvironmentObject private var userSettings: UserSettings
-    @AppStorage("user") var userStorage = Data()
     
     private let storageManager = StorageManager.shared
     
@@ -46,14 +45,7 @@ struct LoginView: View {
             userSettings.name = name
             userSettings.isRegistered.toggle()
         }
-        saveUser()
-    }
-    
-    private func saveUser() {
-        let user = User(name: userSettings.name, isRegistered: userSettings.isRegistered)
-        storageManager.save(user) { userData in
-            userStorage = userData
-        }
+        storageManager.save(userSettings)
     }
 }
 
