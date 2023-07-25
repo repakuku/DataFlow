@@ -9,16 +9,35 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var name = ""
+    @State private var buttonDisabled = true
+    @State private var color = Color.red
     @EnvironmentObject private var userSettings: UserSettings
+    
+
     
     var body: some View {
         VStack {
-            TextField("Enter your name...", text: $name)
-                .multilineTextAlignment(.center)
+            HStack {
+                TextField("Enter your name...", text: $name)
+                    .multilineTextAlignment(.center)
+                    .onChange(of: name) { newValue in
+                        if newValue.count > 2 {
+                            buttonDisabled = false
+                            color = .green
+                        } else {
+                            buttonDisabled = true
+                            color = .red
+                        }
+                }
+                Text("\(name.count)")
+                    .foregroundColor(color)
+            }
             Button(action: registerUser) {
                 Label("Ok", systemImage: "checkmark.circle")
             }
+            .disabled(buttonDisabled)
         }
+        .padding()
     }
     
     private func registerUser() {
