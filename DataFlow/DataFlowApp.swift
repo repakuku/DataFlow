@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DataFlowApp: App {
+    @StateObject private var userSettings = UserSettings()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(userSettings)
         }
     }
 }
