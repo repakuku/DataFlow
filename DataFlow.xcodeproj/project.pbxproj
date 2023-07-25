@@ -45,7 +45,6 @@
 		076862672A6F4B0B00041D6B = {
 			isa = PBXGroup;
 			children = (
-				0768628B2A6F650700041D6B /* ButtonView.swift */,
 				076862722A6F4B0B00041D6B /* DataFlow */,
 				076862712A6F4B0B00041D6B /* Products */,
 			);
@@ -68,6 +67,7 @@
 				076862892A6F5A9C00041D6B /* RootView.swift */,
 				076862852A6F597700041D6B /* LoginView.swift */,
 				076862752A6F4B0B00041D6B /* ContentView.swift */,
+				0768628B2A6F650700041D6B /* ButtonView.swift */,
 				076862772A6F4B0B00041D6B /* Assets.xcassets */,
 				076862792A6F4B0B00041D6B /* Preview Content */,
 			);
