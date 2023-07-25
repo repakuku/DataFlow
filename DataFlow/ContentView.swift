@@ -20,10 +20,15 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding(.top, 100)
             Spacer()
-            ButtonView(timer: timer)
+            ButtonView(action: timer.startTimer, title: timer.buttonTitle, color: .red)
             Spacer()
+            ButtonView(action: logout, title: "LogOut", color: .blue)
         }
         .padding()
+    }
+    
+    private func logout() {
+        userSettings.isRegistered.toggle()
     }
 }
 
@@ -35,18 +40,20 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
+    let action: () -> Void
+    let title: String
+    let color: Color
     
     var body: some View {
-        Button(action: timer.startTimer) {
+        Button(action: action) {
             ZStack {
-                Text("\(timer.buttonTitle)")
+                Text(title)
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
             }
             .frame(width: 200, height: 60)
-            .background(.red)
+            .background(color)
             .cornerRadius(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
