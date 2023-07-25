@@ -25,10 +25,4 @@ final class StorageManager {
         user.name = userName
         user.isRegistered = userIsRegistered
     }
-    
-    func clear(_ user: UserSettings) {
-        user.name = ""
-        user.isRegistered = false
-        save(user)
-    }
 }

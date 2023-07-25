@@ -30,8 +30,9 @@ struct ContentView: View {
     }
     
     private func logout() {
+        userSettings.name = ""
         userSettings.isRegistered.toggle()
-        storageManager.clear(userSettings)
+        storageManager.save(userSettings)
     }
 }
 
