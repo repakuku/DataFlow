@@ -44,7 +44,7 @@ struct LoginView: View {
         if !name.isEmpty {
             userSettings.name = name
             userSettings.isRegistered.toggle()
-            storageManager.save(userSettings)
+            storageManager.saveUser(with: userSettings)
         }
     }
 }

@@ -21,7 +21,7 @@ struct RootView: View {
             }
         }
         .onAppear {
-            storageManager.load(userSettings)
+            storageManager.loadUser(with: userSettings)
         }
     }
 }
