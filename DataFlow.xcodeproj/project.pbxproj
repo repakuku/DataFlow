@@ -66,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				079631C42A7174EF003E101E /* Models */,
-				0768629B2A7029C400041D6B /* App */,
 				0768629D2A7029D600041D6B /* Services */,
+				0768629B2A7029C400041D6B /* App */,
 				076862992A7029A000041D6B /* Views */,
 				0768629C2A7029CD00041D6B /* Resources */,
 				076862792A6F4B0B00041D6B /* Preview Content */,
@@ -121,9 +121,9 @@
 		079631C42A7174EF003E101E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				079631C52A717501003E101E /* User.swift */,
 				076862872A6F5A2300041D6B /* UserSettings.swift */,
 				076862812A6F508000041D6B /* TimeCounter.swift */,
-				079631C52A717501003E101E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

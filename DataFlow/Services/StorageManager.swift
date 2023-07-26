@@ -10,8 +10,6 @@ import SwiftUI
 
 final class StorageManager {
     @AppStorage("user") var userStorage = Data()
-//    @AppStorage("userName") var userName = ""
-//    @AppStorage("userIsRegistered") var userIsRegistered = false
     
     static let shared = StorageManager()
     
