@@ -30,7 +30,7 @@ final class StorageManager {
     
     func deleteUser(with userSettings: UserSettings) {
         userSettings.user.name = ""
-        userSettings.user.isRegistered = false
+        userSettings.user.isRegistered.toggle()
         saveUser(with: userSettings)
     }
 }

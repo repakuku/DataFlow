@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var buttonDisabled = true
-    @State private var color = Color.red
     @EnvironmentObject private var userSettings: UserSettings
+    @State private var buttonDisabled = true
     
     private let storageManager = StorageManager.shared
     
@@ -19,28 +18,19 @@ struct LoginView: View {
             HStack {
                 TextField("Enter your name...", text: $userSettings.user.name)
                     .multilineTextAlignment(.center)
-                    .onChange(of: userSettings.user.name) { newValue in
-                        if userSettings.nameIsValid {
-                            buttonDisabled = false
-                            color = .green
-                        } else {
-                            buttonDisabled = true
-                            color = .red
-                        }
-                }
                 Text("\(userSettings.user.name.count)")
-                    .foregroundColor(color)
+                    .foregroundColor(userSettings.nameIsValid ? .green : .red)
             }
             Button(action: registerUser) {
                 Label("Ok", systemImage: "checkmark.circle")
             }
-            .disabled(buttonDisabled)
+            .disabled(!userSettings.nameIsValid)
         }
         .padding()
     }
     
     private func registerUser() {
-        userSettings.user.isRegistered = true
+        userSettings.user.isRegistered.toggle()
         storageManager.saveUser(with: userSettings)
     }
 }
