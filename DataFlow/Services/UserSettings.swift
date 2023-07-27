@@ -10,4 +10,7 @@ import Foundation
 final class UserSettings: ObservableObject {
     @Published var user = User(name: "", isRegistered: false)
     
+    var nameIsValid: Bool {
+        user.name.count >= 3
+    }
 }
