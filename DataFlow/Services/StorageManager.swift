@@ -15,7 +15,7 @@ final class StorageManager {
     private init() {}
     
     func saveUser(with userSettings: UserSettings) {
-        let user = User(name: userSettings.name, isRegistered: userSettings.isRegistered)
+        let user = User(name: userSettings.user.name, isRegistered: userSettings.user.isRegistered)
         if let data = try? JSONEncoder().encode(user) {
             userStorage = data
         }
@@ -23,14 +23,14 @@ final class StorageManager {
     
     func loadUser(with userSettings: UserSettings) {
         if let user = try? JSONDecoder().decode(User.self, from: userStorage) {
-            userSettings.name = user.name
-            userSettings.isRegistered = user.isRegistered
+            userSettings.user.name = user.name
+            userSettings.user.isRegistered = user.isRegistered
         }
     }
     
     func deleteUser(with userSettings: UserSettings) {
-        userSettings.name = ""
-        userSettings.isRegistered = false
+        userSettings.user.name = ""
+        userSettings.user.isRegistered = false
         saveUser(with: userSettings)
     }
 }

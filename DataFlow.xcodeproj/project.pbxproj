@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				076862952A701EC600041D6B /* StorageManager.swift */,
+				076862872A6F5A2300041D6B /* UserSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -122,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				079631C52A717501003E101E /* User.swift */,
-				076862872A6F5A2300041D6B /* UserSettings.swift */,
 				076862812A6F508000041D6B /* TimeCounter.swift */,
 			);
 			path = Models;

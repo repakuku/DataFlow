@@ -8,6 +8,6 @@
 import Foundation
 
 final class UserSettings: ObservableObject {
-    @Published var isRegistered = false
-    var name = ""
+    @Published var user = User(name: "", isRegistered: false)
+    
 }

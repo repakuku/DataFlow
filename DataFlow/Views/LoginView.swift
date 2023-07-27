@@ -41,11 +41,9 @@ struct LoginView: View {
     }
     
     private func registerUser() {
-        if !name.isEmpty {
-            userSettings.name = name
-            userSettings.isRegistered.toggle()
-            storageManager.saveUser(with: userSettings)
-        }
+        userSettings.user.name = name
+        userSettings.user.isRegistered = true
+        storageManager.saveUser(with: userSettings)
     }
 }
 

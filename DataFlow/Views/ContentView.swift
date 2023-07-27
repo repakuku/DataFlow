@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Hi, \(userSettings.name)!")
+            Text("Hi, \(userSettings.user.name)!")
                 .font(.largeTitle)
                 .padding(.top, 50)
             Text("\(timer.counter)")
