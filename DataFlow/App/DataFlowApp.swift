@@ -11,10 +11,15 @@ import SwiftUI
 struct DataFlowApp: App {
     @StateObject private var userSettings = UserSettings()
     
+    private let storageManager = StorageManager.shared
+    
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(userSettings)
+                .onAppear {
+                    storageManager.loadUser(with: userSettings)
+                }
         }
     }
 }

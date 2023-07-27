@@ -10,8 +10,6 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject private var userSettings: UserSettings
     
-    private let storageManager = StorageManager.shared
-    
     var body: some View {
         Group {
             if userSettings.user.isRegistered {
@@ -19,9 +17,6 @@ struct RootView: View {
             } else {
                 LoginView()
             }
-        }
-        .onAppear {
-            storageManager.loadUser(with: userSettings)
         }
     }
 }
