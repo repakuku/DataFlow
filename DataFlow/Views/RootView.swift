@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RootView: View {
-    @EnvironmentObject private var userSettings: UserSettings
+    @EnvironmentObject private var userSettings: UserManager
     
     var body: some View {
         Group {
@@ -24,6 +24,6 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .environmentObject(UserSettings())
+            .environmentObject(UserManager())
     }
 }

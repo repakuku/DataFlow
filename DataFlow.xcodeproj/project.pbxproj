@@ -13,7 +13,7 @@
 		0768627B2A6F4B0B00041D6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0768627A2A6F4B0B00041D6B /* Preview Assets.xcassets */; };
 		076862822A6F508000041D6B /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862812A6F508000041D6B /* TimeCounter.swift */; };
 		076862862A6F597700041D6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862852A6F597700041D6B /* LoginView.swift */; };
-		076862882A6F5A2300041D6B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862872A6F5A2300041D6B /* UserSettings.swift */; };
+		076862882A6F5A2300041D6B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862872A6F5A2300041D6B /* UserManager.swift */; };
 		0768628A2A6F5A9C00041D6B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862892A6F5A9C00041D6B /* RootView.swift */; };
 		0768628C2A6F650700041D6B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768628B2A6F650700041D6B /* ButtonView.swift */; };
 		076862962A701EC600041D6B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076862952A701EC600041D6B /* StorageManager.swift */; };
@@ -28,7 +28,7 @@
 		0768627A2A6F4B0B00041D6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		076862812A6F508000041D6B /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		076862852A6F597700041D6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		076862872A6F5A2300041D6B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		076862872A6F5A2300041D6B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		076862892A6F5A9C00041D6B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0768628B2A6F650700041D6B /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		076862952A701EC600041D6B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -113,8 +113,9 @@
 		0768629D2A7029D600041D6B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				076862872A6F5A2300041D6B /* UserManager.swift */,
 				076862952A701EC600041D6B /* StorageManager.swift */,
-				076862872A6F5A2300041D6B /* UserSettings.swift */,
+				076862812A6F508000041D6B /* TimeCounter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				079631C52A717501003E101E /* User.swift */,
-				076862812A6F508000041D6B /* TimeCounter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				076862822A6F508000041D6B /* TimeCounter.swift in Sources */,
-				076862882A6F5A2300041D6B /* UserSettings.swift in Sources */,
+				076862882A6F5A2300041D6B /* UserManager.swift in Sources */,
 				076862762A6F4B0B00041D6B /* ContentView.swift in Sources */,
 				0768628A2A6F5A9C00041D6B /* RootView.swift in Sources */,
 				076862862A6F597700041D6B /* LoginView.swift in Sources */,

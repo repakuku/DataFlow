@@ -7,10 +7,16 @@
 
 import Foundation
 
-final class UserSettings: ObservableObject {
-    @Published var user = User(name: "", isRegistered: false)
+final class UserManager: ObservableObject {
+    @Published var user = User()
     
     var nameIsValid: Bool {
         user.name.count >= 3
+    }
+    
+    init() {}
+    
+    init(user: User) {
+        self.user = user
     }
 }
