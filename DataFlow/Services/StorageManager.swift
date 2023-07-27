@@ -5,7 +5,6 @@
 //  Created by Алексей Турулин on 7/25/23.
 //
 
-import Foundation
 import SwiftUI
 
 final class StorageManager {
@@ -27,5 +26,11 @@ final class StorageManager {
             userSettings.name = user.name
             userSettings.isRegistered = user.isRegistered
         }
+    }
+    
+    func deleteUser(with userSettings: UserSettings) {
+        userSettings.name = ""
+        userSettings.isRegistered = false
+        saveUser(with: userSettings)
     }
 }
