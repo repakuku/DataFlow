@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct RootView: View {
-    @EnvironmentObject private var userSettings: UserManager
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         Group {
-            if userSettings.user.isRegistered {
+            if userManager.user.isRegistered {
                 ContentView()
             } else {
                 LoginView()
             }
         }
+    }
+    
+    private func someFuns() {
+        userManager
     }
 }
 
