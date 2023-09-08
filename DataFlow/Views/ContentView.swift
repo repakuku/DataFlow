@@ -20,10 +20,22 @@ struct ContentView: View {
             Text("\(timer.counter)")
                 .font(.largeTitle)
                 .padding(.top, 100)
+            
             Spacer()
-            ButtonView(action: timer.startTimer, title: timer.buttonTitle, color: .red)
+            
+            ButtonView(
+                action: timer.startTimer,
+                title: timer.buttonTitle,
+                color: .red
+            )
+            
             Spacer()
-            ButtonView(action: logout, title: "LogOut", color: .blue)
+            
+            ButtonView(
+                action: logout,
+                title: "LogOut",
+                color: .blue
+            )
         }
         .padding()
     }

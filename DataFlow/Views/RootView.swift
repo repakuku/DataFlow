@@ -19,10 +19,6 @@ struct RootView: View {
             }
         }
     }
-    
-    private func someFuns() {
-        userManager
-    }
 }
 
 struct RootView_Previews: PreviewProvider {
