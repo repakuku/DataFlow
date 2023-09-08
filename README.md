@@ -3,6 +3,8 @@
 Working with SwiftUI data flow
 
 * SwiftUI
+* UserDefaults
+* JSON
 
 <img src="https://github.com/repakuku/DataFlow/assets/43852158/b57b6fa1-d1c1-45cb-b817-e12b7efe9625" width="300">
 <img src="https://github.com/repakuku/DataFlow/assets/43852158/56d40fcc-1fec-4e37-8cec-1c100cfe04c8" width="300">
